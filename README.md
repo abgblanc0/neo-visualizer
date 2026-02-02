@@ -28,8 +28,6 @@ La aplicación:
 
 ## 🚀 Instalación
 
-Clona el repositorio:
-
 ```bash
 git clone https://github.com/abgblanc0/neo-visualizer.git
 cd neo-visualizer
