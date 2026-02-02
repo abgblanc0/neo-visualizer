@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# 🚀 NEO Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ **NEO Visualizer** es una aplicación web interactiva que muestra **Near Earth Objects (NEOs)** — Objetos Cercanos a la Tierra — de forma visual y atractiva usando React, TypeScript y Vite.
 
-Currently, two official plugins are available:
+Este proyecto está basado en una plantilla de React + TypeScript + Vite y sirve como ejemplo para consumir APIs públicas (por ejemplo, la API de NASA) y visualizar datos en un frontend moderno.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛰️ ¿Qué muestra esta app?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+La aplicación:
 
-## Expanding the ESLint configuration
+- 🚀 Consulta datos de objetos cercanos a la Tierra (NEOs).  
+- 📊 Visualiza la información de manera clara y organizada.  
+- 🧠 Está construida con tecnologías modernas (React + TypeScript + Vite).  
+- ⚡ Ideal para aprender sobre cómo integrar APIs en frontend y visualización de datos espaciales.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Características
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- 🛠️ Desarrollado con **React** + **TypeScript** y empaquetado con **Vite**  
+- 🔍 Muestra datos relevantes sobre NEOs  
+- 📱 Interfaz mínima, centrada en la información
+- 💡 Base ideal para extender con gráficos, filtros y más
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Instalación
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clona el repositorio:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/abgblanc0/neo-visualizer.git
+cd neo-visualizer
+
+echo VITE_NASA_API_KEY={YOUR_API_KEY} > .env
+
+npm install
+npm run dev
 ```
