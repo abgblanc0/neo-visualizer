@@ -1,4 +1,4 @@
-import type { Asteroid, FeedResponse, OrbitalData, PlanetOrbitalData } from "../types";
+import type { Asteroid, FeedResponse, OrbitalData } from "../types";
 
 const FEED_URL = "https://api.nasa.gov/neo/rest/v1/feed?";
 const LOOKUP_URL = "https://api.nasa.gov/neo/rest/v1/neo/";
@@ -48,7 +48,7 @@ function epochToSeconds(epoch: string): number {
 }
 
 export function calculatePositionAsteroid(
-  el: OrbitalData | PlanetOrbitalData,
+  el: OrbitalData,
   t: number
 ) {
   const a = parseFloat(el.semi_major_axis); // AU

@@ -34,7 +34,7 @@ export interface MissDistance {
 
 export interface Planet {
   name: string
-  orbital_data: PlanetOrbitalData
+  orbital_data: OrbitalData
 }
 
 export interface Asteroid {
@@ -62,21 +62,14 @@ export interface Kilometers {
 }
 
 export interface SolarSystem {
-  [key: string]: PlanetOrbitalData
+  [key: string]: OrbitalData
 }
-
-export type PlanetOrbitalData = Omit<
-  OrbitalData,
-   "data_arc_in_days" | "observations_used"
->;
 
 export interface OrbitalData {
   orbit_id: string
   orbit_determination_date: string
   first_observation_date: string
   last_observation_date: string
-  data_arc_in_days: number
-  observations_used: number
   orbit_uncertainty: string
   minimum_orbit_intersection: string
   jupiter_tisserand_invariant: string
